@@ -53,7 +53,7 @@ trait RegistersViewLocations
     {
         if (! is_null($parent)) {
             $parentLocation = $this->path('resources/views');
-            app('view.finder')->prependLocation($parentLocation);
+            app('view.finder')->prependLocation($parentLocation, $parent['slug']);
         }
 
         $themeLocation = $this->path('resources/views');
